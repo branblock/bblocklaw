@@ -1,0 +1,66 @@
+.navbar {
+  background: $blue;
+  border-bottom: none;
+
+  .navbar-brand {
+    color: $white;
+    text-transform: uppercase;
+
+    .fa-th {
+      color: $lightblue;
+      font-size: $font-size-small;
+    }
+
+  }
+
+  .navbar-text {
+    color: $white;
+    font-size: $font-size-small;
+    margin: 0;
+    padding-top: 16px;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: $lightblue;
+  }
+
+  #nav-phone {
+    margin-right: 20px;
+  }
+
+  .pull-right {
+    margin-right: 200px;
+  }
+
+}
+
+// Toggle brand display
+.navbar-brand.short {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .navbar-brand.long {
+    display: none;
+  }
+
+  .navbar-brand.short {
+    display: inline-block;
+  }
+
+}
+
+
+@media (max-width: 992px) {
+
+  a.nav-expander {
+    background: none repeat scroll 0 0 $black !important;
+  }
+
+  .navbar-text {
+    display: none;
+  }
+
+}

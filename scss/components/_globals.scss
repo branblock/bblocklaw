@@ -1,0 +1,62 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: $base-font-family;
+}
+
+body,
+p {
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+}
+
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.intro {
+  color: $blue;
+  font-family: $title-font-family;
+  font-size: 2.25em;
+  font-style: italic;
+  line-height: 1.25;
+  text-align: center;
+}
+
+
+// Prevent FOUT
+.wf-loading p,
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading a,
+.wf-loading .btn {
+  opacity: 0;
+  transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+}
+
+.wf-active p,
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active a,
+.wf-active .btn {
+  opacity: 1;
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  -webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out;
+}

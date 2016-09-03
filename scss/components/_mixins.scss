@@ -1,0 +1,14 @@
+// Vertical align middle
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin section-padding {
+  padding-bottom: 150px;
+  padding-top: 150px;
+}

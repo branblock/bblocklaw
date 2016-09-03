@@ -1,0 +1,56 @@
+html,
+body {
+  height:100%;
+  width:100%;
+}
+
+.container-full-bg {
+  background: url("/img/lady_justice_with_scale.png/") $blue;
+  background-position: left bottom;
+  background-size: cover;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.container-full-bg .container,
+.container-full-bg .container .jumbotron {
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.jumbotron {
+  background-color: inherit;
+
+  h1 {
+    color: $white;
+    font-family: $title-font-family;
+    font-size: 2.75em;
+    font-style: italic;
+    font-weight: $font-weight-heavy;
+    line-height: 1.25;
+    margin: 0 auto 20px;
+    max-width: 800px;
+  }
+
+  p {
+    color: $lightgray;
+    font-size: $font-size-large;
+  }
+
+  .container-fluid {
+    bottom: 0;
+    color: $lightblue;
+    left: 0;
+    padding-bottom: 10px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .vertical-align {
+    @include vertical-align;
+  }
+
+}
