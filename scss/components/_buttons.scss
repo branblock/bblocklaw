@@ -42,6 +42,7 @@
   color: $white;
   font-weight: $font-weight-medium;
   margin-top: 20px;
+  padding: 8px 14px;
   text-transform: uppercase;
   &:hover {
     background: $darkblue;
@@ -52,13 +53,14 @@
 
 .call-btn {
   background: $green;
-  border: none;
+  border: 2px solid $darkgreen;
   color: $white;
   font-weight: $font-weight-medium;
   margin-top: 10px;
   text-transform: uppercase;
   &:hover {
     background: $darkgreen;
+    border: 2px solid $darkgreen;
     color: $white;
     transition: all .4s ease;
   }

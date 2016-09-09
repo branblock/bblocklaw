@@ -32,6 +32,7 @@ a:focus {
   font-family: "Crimson", "Times New Roman", serif;
   font-size: 2.25em;
   font-style: italic;
+  font-weight: 700;
   line-height: 1.25;
   text-align: center; }
 
@@ -41,7 +42,8 @@ a:focus {
 .wf-loading h3,
 .wf-loading h4,
 .wf-loading a,
-.wf-loading .btn {
+.wf-loading .btn,
+.wf-loading .intro {
   opacity: 0;
   transform: translateY(-20px);
   -ms-transform: translateY(-20px);
@@ -53,7 +55,8 @@ a:focus {
 .wf-active h3,
 .wf-active h4,
 .wf-active a,
-.wf-active .btn {
+.wf-active .btn,
+.wf-active .intro {
   opacity: 1;
   transform: translateY(0);
   -ms-transform: translateY(0);
@@ -271,14 +274,11 @@ th {
   .navbar-brand.short {
     display: inline-block; } }
 @media (max-width: 992px) {
-  a.nav-expander {
-    background: none repeat scroll 0 0 #37404a !important; }
-
   .navbar-text {
     display: none; } }
 footer {
-  background-color: #001b2d;
-  border-top: 5px solid #0071BC;
+  background-color: #333;
+  border: none;
   padding: 40px 0 20px;
   text-decoration: none; }
   footer p {
@@ -287,16 +287,35 @@ footer {
   footer a,
   footer a:active,
   footer a:focus {
-    color: #757575;
+    color: #F2F2F2;
     font-size: 14px;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase; }
     footer a:hover,
     footer a:active:hover,
     footer a:focus:hover {
-      color: #0071BC;
+      color: #DDF1F5;
       text-decoration: none;
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease; }
+  footer ul {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0; }
+  footer li:before {
+    color: #0071BC;
+    content: '>';
+    display: block;
+    float: left;
+    width: 1.2em; }
+  footer .third {
+    text-align: left; }
+  @media (min-width: 992px) {
+    footer .second {
+      padding-left: 120px; }
+    footer .third {
+      padding-top: 0;
+      text-align: right; } }
 
 a.nav-expander {
   background: none repeat scroll 0 0 #0071BC;
@@ -326,7 +345,7 @@ a.nav-expander.fixed {
   position: fixed; }
 
 .nav-expanded a.nav-expander.fixed {
-  right: 22em; }
+  display: none; }
 
 nav {
   background: #37404a;
@@ -337,7 +356,7 @@ nav {
   right: -20em;
   font-size: 1em;
   top: 0;
-  width: 20em;
+  width: 18em;
   z-index: 2000;
   transition: right 0.3s ease-in-out 0s;
   -webkit-transition: right 0.3s ease-in-out 0s;
@@ -355,72 +374,51 @@ body.nav-expanded {
   -o-transition: right 0.4s ease-in-out 0s; }
 
 #nav-close {
-  font-size: 1.25em;
   padding-right: 10px; }
 
 .main-menu li {
-  border-bottom: 1px solid #323949;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: 0.875em;
   padding: 12px; }
+  .main-menu li a,
+  .main-menu li a:focus,
+  .main-menu li a:active {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .main-menu li a:hover,
+    .main-menu li a:focus:hover,
+    .main-menu li a:active:hover {
+      color: #DDF1F5;
+      text-decoration: none; }
 
-.main-menu li a {
-  color: #c4cbcf;
-  text-decoration: none; }
+.special-li a,
+.special-li a:focus,
+.special-li a:active {
+  color: #DDF1F5 !important;
+  font-weight: 700; }
 
-.main-menu li a:hover {
-  color: #DDF1F5;
-  text-decoration: none; }
+.list-inline {
+  margin-left: 20px;
+  padding: 12px; }
+  .list-inline li a,
+  .list-inline li a:focus,
+  .list-inline li a:active {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .list-inline li a:hover,
+    .list-inline li a:focus:hover,
+    .list-inline li a:active:hover {
+      color: #DDF1F5;
+      text-decoration: none; }
+  .list-inline .fa {
+    font-size: 1.375em; }
 
-.main-menu li .sub-nav {
-  border-bottom: 0px;
-  padding: 4px; }
-
-.main-menu a .caret {
-  width: 0;
-  height: 0;
-  display: inline-block;
-  vertical-align: top;
-  border-top: 4px solid #4f5963;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  content: "";
-  margin-top: 8px; }
-
-.main-menu a:hover .caret {
-  border-top-color: #4f5963; }
-
-.main-menu li.open > a > .caret {
-  border-top: none;
-  border-bottom: 4px solid #4f5963;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent; }
-
-.main-menu li.open > a:hover > .caret {
-  border-bottom-color: #4f5963; }
-
-.icon:before {
-  font-family: 'FontAwesome';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-transform: none;
-  content: '\f105'; }
-
-.main-menu li > a > span.icon {
-  float: right;
-  margin: 0.1em 1.7em -0.1em 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-
-.main-menu li > a:hover > span.icon {
-  float: right;
-  margin: 0.1em 0.8em -0.1em 0;
-  opacity: 1; }
+.navbar-text.off-canvas {
+  color: #FFF !important;
+  font-size: 0.875em;
+  margin-left: 30px !important; }
 
 html,
 body {
@@ -485,7 +483,7 @@ body {
   color: #FFF;
   text-transform: uppercase; }
   .navbar-btn:hover {
-    background: #27AE60;
+    background: #27ac5f;
     border: 2px solid #FFF;
     color: #FFF;
     transition: all .4s ease; }
@@ -497,7 +495,7 @@ body {
   font-weight: 600;
   text-transform: uppercase; }
   .jumbotron-btn:hover {
-    background: #27AE60;
+    background: #27ac5f;
     border: 2px solid #FFF;
     color: #FFF;
     transition: all .4s ease; }
@@ -508,28 +506,30 @@ body {
   color: #FFF;
   font-weight: 600;
   margin-top: 20px;
+  padding: 8px 14px;
   text-transform: uppercase; }
   .learn-btn:hover {
-    background: #0062a3;
+    background: #005289;
     color: #FFF;
     transition: all .4s ease; }
 
 .call-btn {
   background: #2ECC71;
-  border: none;
+  border: 2px solid #27ac5f;
   color: #FFF;
   font-weight: 600;
   margin-top: 10px;
   text-transform: uppercase; }
   .call-btn:hover {
-    background: #27AE60;
+    background: #27ac5f;
+    border: 2px solid #27ac5f;
     color: #FFF;
     transition: all .4s ease; }
 
 .home-two {
-  background: url("/img/california_cities.png") no-repeat center bottom #FFF;
-  padding-bottom: 150px;
-  padding-top: 150px; }
+  background: url("/img/california_cities.png") no-repeat center bottom #F2F2F2;
+  padding-bottom: 180px;
+  padding-top: 180px; }
   .home-two a,
   .home-two a:focus,
   .home-two a:active {
@@ -554,13 +554,13 @@ body {
 
 .home-three {
   background: #DDF1F5;
-  border-bottom: 5px solid #0071BC;
-  padding-bottom: 150px;
-  padding-top: 150px; }
+  padding-bottom: 180px;
+  padding-top: 180px; }
   .home-three .intro {
     padding-bottom: 50px; }
   .home-three h2 {
     color: #37404a;
+    font-family: "Crimson", "Times New Roman", serif;
     font-size: 1.375em;
     font-weight: 600;
     margin-bottom: -5px; }
@@ -570,25 +570,25 @@ body {
     margin-top: 100px; }
   .home-three .panel-default {
     border: 2px solid #37404a;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     margin-bottom: 0;
     padding-bottom: 10px; }
     .home-three .panel-default .panel-heading {
       background: #FFF;
       border: none;
-      text-transform: uppercase; }
+      font-style: italic; }
     .home-three .panel-default .fa {
       background: #FFF;
       color: #37404a;
       border: 2px solid #37404a;
       border-radius: 50%;
-      font-size: 2.25em;
+      font-size: 2em;
       margin-top: -40px;
       padding: 20px; }
   .home-three .panel-default.special::after {
     position: absolute;
     content: '';
-    border-left: 2px solid #0062a3;
+    border-left: 2px solid #37404a;
     width: 2px;
     left: 50%;
     top: 100%;
@@ -597,24 +597,18 @@ body {
     margin-left: -1px; }
 
 .call {
-  background: #F2F2F2;
+  background: #FFF;
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center; }
   .call .intro {
-    color: #37404a;
-    font-size: 1.75em;
-    font-weight: 600;
-    line-height: 1;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     text-align: center; }
   .call p {
-    color: #757575; }
+    line-height: 1; }
 
 .navbar.affix .navbar-brand.long {
   display: none; }
 .navbar.affix .navbar-brand.short {
   color: #FFF;
   display: inline-block; }
-.navbar.affix a.nav-expander {
-  background: none repeat scroll 0 0 #37404a; }

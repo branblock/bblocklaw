@@ -1,6 +1,6 @@
 footer {
-  background-color: #001b2d;
-  border-top: 5px solid $blue;
+  background-color: #333;
+  border: none;
   padding: 40px 0 20px;
   text-decoration: none;
   p {
@@ -10,14 +10,43 @@ footer {
   a,
   a:active,
   a:focus {
-    color: $darkgray;
+    color: $lightgray;
     font-size: 14px;
     text-decoration: none;
+    text-transform: uppercase;
     &:hover {
-      color: $blue;
+      color: $lightblue;
       text-decoration: none;
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease;
     }
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0;
+  }
+  li:before {
+    color: $blue;
+    content: '>';
+    display: block;
+    float: left;
+    width: 1.2em;
+  }
+
+  .third {
+    text-align: left;
+  }
+
+  @media (min-width: 992px) {
+
+    .second {
+      padding-left: 120px;
+    }
+    .third {
+      padding-top: 0;
+      text-align: right;
+    }
+
   }
 }

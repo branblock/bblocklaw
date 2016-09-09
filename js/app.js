@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 });
 
+// Bootstrap affix plugin
 $('#myAffix').affix({
   offset: {
     top: 100,

@@ -27,6 +27,7 @@ a:focus {
   font-family: $title-font-family;
   font-size: 2.25em;
   font-style: italic;
+  font-weight: $font-weight-heavy;
   line-height: 1.25;
   text-align: center;
 }
@@ -39,7 +40,8 @@ a:focus {
 .wf-loading h3,
 .wf-loading h4,
 .wf-loading a,
-.wf-loading .btn {
+.wf-loading .btn,
+.wf-loading .intro {
   opacity: 0;
   transform: translateY(-20px);
   -ms-transform: translateY(-20px);
@@ -52,7 +54,8 @@ a:focus {
 .wf-active h3,
 .wf-active h4,
 .wf-active a,
-.wf-active .btn {
+.wf-active .btn,
+.wf-active .intro {
   opacity: 1;
   transform: translateY(0);
   -ms-transform: translateY(0);
