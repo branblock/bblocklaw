@@ -30,7 +30,7 @@ a.nav-expander.fixed {
 }
 
 .nav-expanded a.nav-expander.fixed {
-  right: 22em;
+  display: none;
 }
 
 nav {
@@ -42,7 +42,7 @@ nav {
   right: -20em;
   font-size: 1em;
   top: 0;
-  width: 20em;
+  width: 18em;
   z-index: 2000;
 
   transition: right 0.3s ease-in-out 0s;
@@ -65,82 +65,63 @@ body.nav-expanded {
 }
 
 #nav-close {
-  font-size: $font-size-xl;
   padding-right: 10px;
 }
 
 .main-menu li {
-  border-bottom: 1px solid #323949;
   margin-left: 20px;
-  font-size: 18px;
+  font-size: $font-size-small;
   padding: 12px;
-}
 
-.main-menu li a {
-  color: $mediumgray;
-  text-decoration: none;
-}
+  a,
+  a:focus,
+  a:active {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
 
-.main-menu li a:hover {
-  color: $lightblue;
-  text-decoration: none;
-}
+    &:hover {
+      color: $lightblue;
+      text-decoration: none;
+    }
 
-.main-menu li .sub-nav {
-  border-bottom: 0px;
-  padding: 4px;
-}
-
-.main-menu a .caret {
-	width: 0;
-	height: 0;
-	display: inline-block;
-	vertical-align: top;
-	border-top: 4px solid #4f5963;
-	border-right: 4px solid transparent;
-	border-left: 4px solid transparent;
-	content: "";
-    margin-top: 8px;
-}
-
-.main-menu a:hover .caret {
-	border-top-color: #4f5963;
-}
-
-.main-menu li.open > a > .caret {
-	border-top: none;
-	border-bottom: 4px solid #4f5963;
-	border-right: 4px solid transparent;
-	border-left: 4px solid transparent;
-}
-
-.main-menu li.open > a:hover > .caret {
-	border-bottom-color: #4f5963;
-}
-
-.icon:before {
-  font-family: 'FontAwesome';
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-transform: none;
-  content: '\f105';
-}
-
-.main-menu li > a > span.icon {
-  float: right;
-  margin: 0.1em 1.7em -0.1em 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  }
 
 }
 
-.main-menu li > a:hover > span.icon {
-  float: right;
-  margin: 0.1em 0.8em -0.1em 0;
-  opacity: 1;
+.special-li a,
+.special-li a:focus,
+.special-li a:active {
+  color: $lightblue !important;
+  font-weight: $font-weight-heavy;
+}
+
+.list-inline {
+  margin-left: 20px;
+  padding: 12px;
+
+  li a,
+  li a:focus,
+  li a:active {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $lightblue;
+      text-decoration: none;
+    }
+
+  }
+
+  .fa {
+    font-size: $font-size-xxl;
+  }
+
+}
+
+.navbar-text.off-canvas {
+  color: $white !important;
+  font-size: $font-size-small;
+  margin-left: 30px !important;
 }
