@@ -1,6 +1,6 @@
 .btn {
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   font-weight: $font-weight-medium;
   text-decoration: none;
   &:hover {
@@ -24,13 +24,13 @@
 
 .jumbotron-btn {
   background: $green;
-  border: 2px solid $white;
+  border: none;
   color: $white;
   font-weight: $font-weight-medium;
+  padding: .75em 1.5em;
   text-transform: uppercase;
   &:hover {
     background: $darkgreen;
-    border: 2px solid $white;
     color: $white;
     transition: all .4s ease;
   }
@@ -42,7 +42,7 @@
   color: $white;
   font-weight: $font-weight-medium;
   margin-top: 20px;
-  padding: 8px 14px;
+  padding: .75em 1.25em;
   text-transform: uppercase;
   &:hover {
     background: $darkblue;
@@ -53,14 +53,14 @@
 
 .call-btn {
   background: $green;
-  border: 2px solid $darkgreen;
+  border: none;
   color: $white;
   font-weight: $font-weight-medium;
   margin-top: 10px;
+  padding: .75em 1.5em;
   text-transform: uppercase;
   &:hover {
     background: $darkgreen;
-    border: 2px solid $darkgreen;
     color: $white;
     transition: all .4s ease;
   }

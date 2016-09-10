@@ -30,7 +30,7 @@ a:focus {
 .intro {
   color: #0071BC;
   font-family: "Crimson", "Times New Roman", serif;
-  font-size: 2.25em;
+  font-size: 2.5em;
   font-style: italic;
   font-weight: 700;
   line-height: 1.25;
@@ -288,7 +288,7 @@ footer {
   footer a:active,
   footer a:focus {
     color: #F2F2F2;
-    font-size: 14px;
+    font-size: 0.875em;
     text-decoration: none;
     text-transform: uppercase; }
     footer a:hover,
@@ -298,24 +298,16 @@ footer {
       text-decoration: none;
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease; }
-  footer ul {
-    list-style: none;
-    margin-bottom: 30px;
-    padding-left: 0; }
-  footer li:before {
-    color: #0071BC;
-    content: '>';
-    display: block;
-    float: left;
-    width: 1.2em; }
-  footer .third {
-    text-align: left; }
-  @media (min-width: 992px) {
-    footer .second {
-      padding-left: 120px; }
-    footer .third {
-      padding-top: 0;
-      text-align: right; } }
+  footer .list-inline {
+    margin-left: 0;
+    padding: 0 0 .75em; }
+    footer .list-inline .footer-li:before {
+      color: #FFF;
+      content: '/';
+      display: block;
+      float: left;
+      padding-right: 1em;
+      width: 1em; }
 
 a.nav-expander {
   background: none repeat scroll 0 0 #0071BC;
@@ -397,10 +389,14 @@ body.nav-expanded {
 .special-li a:active {
   color: #DDF1F5 !important;
   font-weight: 700; }
+  .special-li a:hover,
+  .special-li a:focus:hover,
+  .special-li a:active:hover {
+    color: #FFF !important; }
 
 .list-inline {
-  margin-left: 20px;
-  padding: 12px; }
+  margin-left: 25px;
+  padding: 12px 12px 12px 0; }
   .list-inline li a,
   .list-inline li a:focus,
   .list-inline li a:active {
@@ -417,8 +413,10 @@ body.nav-expanded {
 
 .navbar-text.off-canvas {
   color: #FFF !important;
+  display: inline-block;
   font-size: 0.875em;
-  margin-left: 30px !important; }
+  margin-left: 30px !important;
+  cursor: text; }
 
 html,
 body {
@@ -445,7 +443,7 @@ body {
   .jumbotron h1 {
     color: #FFF;
     font-family: "Crimson", "Times New Roman", serif;
-    font-size: 2.75em;
+    font-size: 2.8em;
     font-style: italic;
     font-weight: 700;
     line-height: 1.25;
@@ -470,7 +468,7 @@ body {
 
 .btn {
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
   font-weight: 600;
   text-decoration: none; }
   .btn:hover {
@@ -490,13 +488,13 @@ body {
 
 .jumbotron-btn {
   background: #2ECC71;
-  border: 2px solid #FFF;
+  border: none;
   color: #FFF;
   font-weight: 600;
+  padding: .75em 1.5em;
   text-transform: uppercase; }
   .jumbotron-btn:hover {
     background: #27ac5f;
-    border: 2px solid #FFF;
     color: #FFF;
     transition: all .4s ease; }
 
@@ -506,7 +504,7 @@ body {
   color: #FFF;
   font-weight: 600;
   margin-top: 20px;
-  padding: 8px 14px;
+  padding: .75em 1.25em;
   text-transform: uppercase; }
   .learn-btn:hover {
     background: #005289;
@@ -515,14 +513,14 @@ body {
 
 .call-btn {
   background: #2ECC71;
-  border: 2px solid #27ac5f;
+  border: none;
   color: #FFF;
   font-weight: 600;
   margin-top: 10px;
+  padding: .75em 1.5em;
   text-transform: uppercase; }
   .call-btn:hover {
     background: #27ac5f;
-    border: 2px solid #27ac5f;
     color: #FFF;
     transition: all .4s ease; }
 

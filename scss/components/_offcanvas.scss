@@ -94,11 +94,16 @@ body.nav-expanded {
 .special-li a:active {
   color: $lightblue !important;
   font-weight: $font-weight-heavy;
+
+  &:hover {
+    color: $white !important;
+  }
+
 }
 
 .list-inline {
-  margin-left: 20px;
-  padding: 12px;
+  margin-left: 25px;
+  padding: 12px 12px 12px 0;
 
   li a,
   li a:focus,
@@ -122,6 +127,8 @@ body.nav-expanded {
 
 .navbar-text.off-canvas {
   color: $white !important;
+  display: inline-block;
   font-size: $font-size-small;
   margin-left: 30px !important;
+  cursor: text;
 }
